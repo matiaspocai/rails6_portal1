@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>Seccion:</strong>
+  <%= @article.seccion %>
+</p>
+<p>
+  <strong>Volanta:</strong>
+  <%= @article.volanta %>
+</p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @article.titulo %>
+</p>
+
+<% if @article.image.present? %>
+  <div style="width:300px; height:auto" >
+    <%= link_to image_tag(@article.image, style:'width:100%'), articles_path %>
+  </div>
+<% end %>
+
+<p>
+  <strong>Bajada:</strong>
+  <%= @article.bajada %>
+</p>
+
+<p>
+  <strong>Autor:</strong>
+  <%= @article.autor %>
+</p>
+
+<p>
+  <strong>Cuerpo:</strong>
+  <%= @article.cuerpo %>
+</p>
+
+<% if @article.imagedos.present? %>
+  <div style="width:300px; height:auto" >
+    <%= link_to image_tag(@article.imagedos, style:'width:100%'), articles_path %>
+  </div>
+<% end %>
+
+
+<%= link_to 'Edit', edit_article_path(@article) %> |
+<%= link_to 'Back', articles_path %>
