@@ -48,17 +48,15 @@
 
   <div class="field">
     <%= form.label :ubicacion %>
-    <%= form.text_field :ubicacion %>
+    <%= form.text_field :ubicacion, :maxlength => 4 %>
   </div>
 
   <div class="field">
-    <%= form.label :seccion %>
-    <%= form.text_field :seccion %>
+    <%= form.select :seccion, options_for_select([['Normal','nor'],['Destacada','des']], selected: article.seccion) %>
   </div>
 
   <div class="field">
-    <%= form.label :publicado %>
-    <%= form.text_field :publicado %>
+    <%= form.select :publicado, options_for_select([['Sí','si'],['No','no']], selected: article.publicado) %>
   </div>
 
   <div class="actions">

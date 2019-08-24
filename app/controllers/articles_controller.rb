@@ -1,27 +1,27 @@
 class ArticlesController < ApplicationController
-  before_action :set_article, only: [:show, :edit, :update, :destroy]
+  before_action :find_article, only: [:show, :edit, :update, :destroy]
 
-  # GET /articles
-  # GET /articles.json
   def index
     @articles = Article.all
   end
 
-  # GET /articles/1
-  # GET /articles/1.json
-  def show
+  def home
+    @articles = Article.where(publicado: "si", area: "a")
   end
 
-  # GET /articles/new
+  # GET /articles/1.json
+  def show
+    @article = find_article
+  end
+
   def new
     @article = Article.new
   end
 
-  # GET /articles/1/edit
   def edit
+    @article = find_article
   end
 
-  # POST /articles
   # POST /articles.json
   def create
     @article = Article.new(article_params)
@@ -37,9 +37,8 @@ class ArticlesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /articles/1
-  # PATCH/PUT /articles/1.json
   def update
+    @article = find_article
     respond_to do |format|
       if @article.update(article_params)
         format.html { redirect_to @article, notice: 'Article was successfully updated.' }
@@ -51,9 +50,8 @@ class ArticlesController < ApplicationController
     end
   end
 
-  # DELETE /articles/1
-  # DELETE /articles/1.json
   def destroy
+    @article = find_article
     @article.destroy
     respond_to do |format|
       format.html { redirect_to articles_url, notice: 'Article was successfully destroyed.' }
@@ -62,12 +60,10 @@ class ArticlesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_article
-      @article = Article.find(params[:id])
+    def find_article
+      Article.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
       params.require(:article).permit(:volanta, :titulo, :bajada, :autor, :cuerpo, :ubicacion, :seccion, :publicado, :image, :imagedos)
     end

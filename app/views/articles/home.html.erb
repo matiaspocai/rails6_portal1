@@ -1,0 +1,11 @@
+<h1>Home</h1>
+<% @articles.each do |article| %>
+  <h2>
+    <%= article.titulo %>
+  </h2>
+  <% if article.image.present? %>
+    <div style="width:300px; height:auto" >
+      <%= link_to image_tag(article.image, style:'width:100%'), articles_path %>
+    </div>
+  <% end %>
+<% end %>

@@ -34,6 +34,11 @@
   <%= @article.cuerpo %>
 </p>
 
+<p>
+  <strong>Publicado:</strong>
+  <%= @article.publicado %>
+</p>
+
 <% if @article.imagedos.present? %>
   <div style="width:300px; height:auto" >
     <%= link_to image_tag(@article.imagedos, style:'width:100%'), articles_path %>
