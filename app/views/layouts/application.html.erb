@@ -18,6 +18,16 @@
          <li>
           <%= link_to 'Artículos', articles_path %>
         </li>
+        <li>
+          <div>
+            <% if signed_in? %>
+              <%= link_to "Salir", destroy_user_session_path, method: :delete %>
+            <% else %>
+              <%= link_to "Registrarse", new_user_registration_path %>
+              <%= link_to "Ingresar", new_user_session_path %>
+            <% end %>
+          </div>
+        </li>
       </ul>
     </nav>
     <%= yield %>
