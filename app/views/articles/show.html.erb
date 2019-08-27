@@ -15,7 +15,7 @@
 
 <% if @article.image.present? %>
   <div style="width:300px; height:auto" >
-    <%= link_to image_tag(@article.image, style:'width:100%'), articles_path %>
+    <%= image_tag(@article.image, style:'width:100%') %>
   </div>
 <% end %>
 
@@ -31,7 +31,9 @@
 
 <p>
   <strong>Cuerpo:</strong>
-  <%= @article.cuerpo %>
+  <div class="cuerpo">
+    <%= @article.cuerpo %>
+  </div>
 </p>
 
 <p>
@@ -39,9 +41,19 @@
   <%= @article.publicado %>
 </p>
 
+<p>
+  <strong>Area:</strong>
+  <%= @article.area %>
+</p>
+
+<p>
+  <strong>Ubicacion:</strong>
+  <%= @article.ubicacion %>
+</p>
+
 <% if @article.imagedos.present? %>
   <div style="width:300px; height:auto" >
-    <%= link_to image_tag(@article.imagedos, style:'width:100%'), articles_path %>
+    <%= image_tag(@article.imagedos, style:'width:100%') %>
   </div>
 <% end %>
 

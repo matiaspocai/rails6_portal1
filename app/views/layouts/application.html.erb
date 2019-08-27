@@ -10,6 +10,16 @@
   </head>
 
   <body>
+    <nav>
+      <ul>
+        <li>
+          <%= link_to 'Portada', home_path %>
+        </li>
+         <li>
+          <%= link_to 'Artículos', articles_path %>
+        </li>
+      </ul>
+    </nav>
     <%= yield %>
   </body>
 </html>

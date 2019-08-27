@@ -6,7 +6,11 @@ class ArticlesController < ApplicationController
   end
 
   def home
-    @articles = Article.where(publicado: "si", area: "a")
+    @articles = Article.where(publicado: "si", area: "n")
+    destacados = Article.where(publicado: "si", area: "d")
+    @destacado = destacados.last
+    urgente = Article.where(publicado:"si", area:"u")
+    @urgente = urgente.last
   end
 
   # GET /articles/1.json
@@ -65,6 +69,6 @@ class ArticlesController < ApplicationController
     end
 
     def article_params
-      params.require(:article).permit(:volanta, :titulo, :bajada, :autor, :cuerpo, :ubicacion, :seccion, :publicado, :image, :imagedos)
+      params.require(:article).permit(:volanta, :titulo, :bajada, :autor, :cuerpo, :ubicacion, :seccion, :publicado, :image, :imagedos, :area)
     end
 end
