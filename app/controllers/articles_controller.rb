@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :authenticate_user!, except: [:home]
+  before_action :authenticate_user!, except: [:home, :show]
   before_action :find_article, only: [:show, :edit, :update, :destroy]
 
   def index
