@@ -1,15 +1,15 @@
 <h1>Portada</h1>
 
-<% if @urgente.present?%>
-  <div>
-    <h2>
-      <%= link_to @urgente.titulo, @urgente %>
-    </h2>
-  </div>
-<% end %>
+<article class="urgente__home" >
+  <% if @urgente.present?%>
+      <h2>
+        <%= link_to @urgente.titulo, @urgente %>
+      </h2>
+  <% end %>
+</article>
 
 <% if @destacado.present?%>
-  <div>
+  <article class="destacado__home">
     <h2>
       <%= link_to @destacado.titulo, @destacado %>
     </h2>
@@ -18,18 +18,20 @@
         <%= link_to image_tag(@destacado.image, style:'width:100%'), @destacado %>
       </div>
     <% end %>
-  </div>
+  </article>
 <% end %>
 
 <% if @articles.present? %>
   <% @articles.each do |article| %>
-    <h2>
-      <%= link_to article.titulo, article %>
-    </h2>
-    <% if article.image.present? %>
-      <div style="width:300px; height:auto" >
-        <%= link_to image_tag(article.image, style:'width:100%'), article %>
-      </div>
-    <% end %>
+    <article class="normal__home">
+      <h2>
+        <%= link_to article.titulo, article %>
+      </h2>
+      <% if article.image.present? %>
+        <div style="width:300px; height:auto" >
+          <%= link_to image_tag(article.image, style:'width:100%'), article %>
+        </div>
+      <% end %>
+    </article>
   <% end %>
 <% end %>

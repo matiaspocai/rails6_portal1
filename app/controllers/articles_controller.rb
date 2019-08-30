@@ -7,11 +7,11 @@ class ArticlesController < ApplicationController
   end
 
   def home
-    @articles = Article.where(publicado: "si", area: "n")
-    destacados = Article.where(publicado: "si", area: "d")
-    @destacado = destacados.last
     urgente = Article.where(publicado:"si", area:"u")
     @urgente = urgente.last
+    destacados = Article.where(publicado: "si", area: "d")
+    @destacado = destacados.last
+    @articles = Article.where(publicado: "si", area: "n")
   end
 
   # GET /articles/1.json

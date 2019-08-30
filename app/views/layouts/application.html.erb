@@ -10,26 +10,34 @@
   </head>
 
   <body>
+    <header>
+      <h1>
+        P1: Modelo Portal con Rails
+      </h1>
+    </header>
     <nav>
       <ul>
         <li>
           <%= link_to 'Portada', home_path %>
         </li>
-         <li>
-          <%= link_to 'Artículos', articles_path %>
-        </li>
-        <li>
-          <div>
             <% if signed_in? %>
-              <%= link_to "Salir", destroy_user_session_path, method: :delete %>
+              <li>
+                <%= link_to 'Panel de Edición', articles_path %>
+              </li>
+              <li>
+                <%= link_to "Salir", destroy_user_session_path, method: :delete %>
+              </li>
             <% else %>
-              <%= link_to "Registrarse", new_user_registration_path %>
-              <%= link_to "Ingresar", new_user_session_path %>
-            <% end %>
-          </div>
-        </li>
-      </ul>
-    </nav>
+              <li>
+                <%= link_to "Registrarse", new_user_registration_path %>
+              </li>
+              <li>
+                <%= link_to "Ingresar", new_user_session_path %>
+              </li>
+            <% end %>    
+        </ul>
+      </nav>
+
     <%= yield %>
   </body>
 </html>
