@@ -4,8 +4,50 @@
 
 body{
     display: grid;
+    grid-template-areas: 
+    "he he"
+    "na na"    
+    "ur ur"
+    "a1 a2"
+    "a3 a4"
+    "a5 a6",
 }
 
 .cuerpo{
     font-size: 1rem;
+}
+
+header{
+    grid-area: he;
+}
+
+nav{
+    grid-area: na;
+}
+
+.urgente__home{
+    grid-area: ur; 
+}
+
+.a1{
+    grid-area: a1;
+}
+
+.a2{
+    grid-area: a2;
+}
+
+.a3{
+    grid-area: a3;
+}
+
+.a4{
+    grid-area: a4;
+}
+.a5{
+    grid-area: a5;
+}
+
+.a6{
+    grid-area: a6;
 }

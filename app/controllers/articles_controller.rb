@@ -11,7 +11,13 @@ class ArticlesController < ApplicationController
     @urgente = urgente.last
     destacados = Article.where(publicado: "si", area: "d")
     @destacado = destacados.last
-    @articles = Article.where(publicado: "si", area: "n")
+    articles = Article.where(publicado: "si", area: "n")
+    @a1 = articles[0]
+    @a2 = articles[1]
+    @a3 = articles[2]
+    @a4 = articles[3]
+    @a5 = articles[4]
+    @a6 = articles[5]
   end
 
   # GET /articles/1.json
