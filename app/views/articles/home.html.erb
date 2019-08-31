@@ -1,8 +1,8 @@
 <article class="urgente__home" >
   <% if @urgente.present?%>
-      <h2>
-        <%= link_to @urgente.titulo, @urgente %>
-      </h2>
+      <div class="urgente">
+        <%= @urgente.titulo %>
+      </div>
   <% end %>
 </article>
 
