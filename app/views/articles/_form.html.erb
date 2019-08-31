@@ -13,18 +13,25 @@
 
   <div class="field">
     <%= form.label :volanta %>
-    <%= form.text_field :volanta %>
+    <%= form.text_field :volanta, :required => true %>
   </div>
 
   <div class="field">
     <%= form.label :titulo %>
-    <%= form.text_field :titulo %>
+    <%= form.text_field :titulo,:required => true %>
   </div>
 
-  <div class="">
-    <%= form.label :image %>
-    <%= form.file_field :image, :required => true %>
-  </div>
+  <% if article.image.present? %>
+    <div class="">
+      <%= form.label :image %>
+      <%= form.file_field :image %>
+    </div>
+  <% else %>
+    <div class="">
+      <%= form.label :image %>
+      <%= form.file_field :image, :required => true %>
+    </div>
+  <% end %>
 
   <div class="">
     <%= form.label :imagedos %>
@@ -33,7 +40,7 @@
 
   <div class="field">
     <%= form.label :bajada %>
-    <%= form.text_field :bajada %>
+    <%= form.text_field :bajada, :required => true %>
   </div>
 
   <div class="field">
