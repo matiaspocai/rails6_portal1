@@ -16,6 +16,12 @@ class ArticlesController < ApplicationController
     @a4 = articles[3]
     @a5 = articles[4]
     @a6 = articles[5]
+    @a7 = articles[6]
+    @a8 = articles[7]
+    @a9 = articles[8]
+    @a10 = articles[9]
+    @a11 = articles[10]
+    @a12 = articles[11]
   end
 
   # GET /articles/1.json
