@@ -1,23 +1,10 @@
-<article class="urgente__home" >
   <% if @urgente.present?%>
+    <article class="urgente__home" >
       <div class="urgente">
         <%= @urgente.titulo %>
       </div>
+    </article>
   <% end %>
-</article>
-
-<% if @destacado.present?%>
-  <article class="destacado__home">
-    <h2>
-      <%= link_to @destacado.titulo, @destacado %>
-    </h2>
-    <% if @destacado.image.present? %>
-      <div style="width:300px; height:auto" >
-        <%= link_to image_tag(@destacado.image, style:'width:100%'), @destacado %>
-      </div>
-    <% end %>
-  </article>
-<% end %>
 
 <% if @a1.present? %>
     <article class="normal__home a1">

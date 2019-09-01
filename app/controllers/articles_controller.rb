@@ -9,8 +9,6 @@ class ArticlesController < ApplicationController
   def home
     urgente = Article.where(publicado:"si", area:"u")
     @urgente = urgente.last
-    destacados = Article.where(publicado: "si", area: "d")
-    @destacado = destacados.last
     articles = Article.where(publicado: "si", area: "n")
     @a1 = articles[0]
     @a2 = articles[1]
@@ -52,7 +50,7 @@ class ArticlesController < ApplicationController
     @article = find_article
     respond_to do |format|
       if @article.update(article_params)
-        format.html { redirect_to @article, notice: 'Article was successfully updated.' }
+        format.html { redirect_to home_path }
         format.json { render :show, status: :ok, location: @article }
       else
         format.html { render :edit }
