@@ -3,13 +3,13 @@ class ArticlesController < ApplicationController
   before_action :find_article, only: [:show, :edit, :update, :destroy]
 
   def index
-    @articles = Article.all
+    @articles = Article.all.order(id: :desc)
   end
 
   def home
     urgente = Article.where(publicado:"si", area:"u")
     @urgente = urgente.last
-    articles = Article.where(publicado: "si", area: "n")
+    articles = Article.where(publicado: "si", area: "n").order(ubicacion: :asc)
     @a1 = articles[0]
     @a2 = articles[1]
     @a3 = articles[2]
