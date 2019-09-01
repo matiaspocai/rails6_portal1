@@ -1,163 +1,166 @@
-  <% if @urgente.present?%>
-    <article class="urgente__home" >
-      <div class="urgente">
-        <%= @urgente.titulo %>
-      </div>
-    </article>
-  <% end %>
-
-<% if @a1.present? %>
-    <article class="normal__home a1">
-      <h2>
-        <%= link_to @a1.titulo, @a1 %>
-      </h2>
-      <% if @a1.image.present? %>
-        <div style="width:300px; height:auto" >
-          <%= link_to image_tag(@a1.image, style:'width:100%'), @a1 %>
+  <div class="contenedor__home">
+      
+    <% if @urgente.present?%>
+      <article class="urgente__home" >
+        <div class="urgente">
+          <%= @urgente.titulo %>
         </div>
-      <% end %>
-    </article>
-<% end %>
+      </article>
+    <% end %>
 
-<% if @a2.present? %>
-    <article class="normal__home a2">
-      <h2>
-        <%= link_to @a2.titulo, @a2 %>
-      </h2>
-      <% if @a2.image.present? %>
-        <div style="width:300px; height:auto" >
-          <%= link_to image_tag(@a2.image, style:'width:100%'), @a2 %>
-        </div>
-      <% end %>
-    </article>
-<% end %>
+    <% if @a1.present? %>
+        <article class="normal__home a1">
+          <h2>
+            <%= link_to @a1.titulo, @a1 %>
+          </h2>
+          <% if @a1.image.present? %>
+            <div style="width:300px; height:auto" >
+              <%= link_to image_tag(@a1.image, style:'width:100%'), @a1 %>
+            </div>
+          <% end %>
+        </article>
+    <% end %>
 
-<% if @a3.present? %>
-    <article class="normal__home a3">
-      <h2>
-        <%= link_to @a3.titulo, @a3 %>
-      </h2>
-      <% if @a3.image.present? %>
-        <div style="width:300px; height:auto" >
-          <%= link_to image_tag(@a3.image, style:'width:100%'), @a3 %>
-        </div>
-      <% end %>
-    </article>
-<% end %>
+    <% if @a2.present? %>
+        <article class="normal__home a2">
+          <h2>
+            <%= link_to @a2.titulo, @a2 %>
+          </h2>
+          <% if @a2.image.present? %>
+            <div style="width:300px; height:auto" >
+              <%= link_to image_tag(@a2.image, style:'width:100%'), @a2 %>
+            </div>
+          <% end %>
+        </article>
+    <% end %>
 
-<% if @a4.present? %>
-    <article class="normal__home a4">
-      <h2>
-        <%= link_to @a4.titulo, @a4 %>
-      </h2>
-      <% if @a4.image.present? %>
-        <div style="width:300px; height:auto" >
-          <%= link_to image_tag(@a4.image, style:'width:100%'), @a4 %>
-        </div>
-      <% end %>
-    </article>
-<% end %>
+    <% if @a3.present? %>
+        <article class="normal__home a3">
+          <h2>
+            <%= link_to @a3.titulo, @a3 %>
+          </h2>
+          <% if @a3.image.present? %>
+            <div style="width:300px; height:auto" >
+              <%= link_to image_tag(@a3.image, style:'width:100%'), @a3 %>
+            </div>
+          <% end %>
+        </article>
+    <% end %>
 
-<% if @a5.present? %>
-    <article class="normal__home a5">
-      <h2>
-        <%= link_to @a5.titulo, @a5 %>
-      </h2>
-      <% if @a5.image.present? %>
-        <div style="width:300px; height:auto" >
-          <%= link_to image_tag(@a5.image, style:'width:100%'), @a5 %>
-        </div>
-      <% end %>
-    </article>
-<% end %>
+    <% if @a4.present? %>
+        <article class="normal__home a4">
+          <h2>
+            <%= link_to @a4.titulo, @a4 %>
+          </h2>
+          <% if @a4.image.present? %>
+            <div style="width:300px; height:auto" >
+              <%= link_to image_tag(@a4.image, style:'width:100%'), @a4 %>
+            </div>
+          <% end %>
+        </article>
+    <% end %>
 
-<% if @a6.present? %>
-    <article class="normal__home a6">
-      <h2>
-        <%= link_to @a6.titulo, @a6 %>
-      </h2>
-      <% if @a6.image.present? %>
-        <div style="width:300px; height:auto" >
-          <%= link_to image_tag(@a6.image, style:'width:100%'), @a6 %>
-        </div>
-      <% end %>
-    </article>
-<% end %>
+    <% if @a5.present? %>
+        <article class="normal__home a5">
+          <h2>
+            <%= link_to @a5.titulo, @a5 %>
+          </h2>
+          <% if @a5.image.present? %>
+            <div style="width:300px; height:auto" >
+              <%= link_to image_tag(@a5.image, style:'width:100%'), @a5 %>
+            </div>
+          <% end %>
+        </article>
+    <% end %>
 
-<% if @a7.present? %>
-    <article class="normal__home a7">
-      <h2>
-        <%= link_to @a7.titulo, @a7 %>
-      </h2>
-      <% if @a7.image.present? %>
-        <div style="width:300px; height:auto" >
-          <%= link_to image_tag(@a7.image, style:'width:100%'), @a7 %>
-        </div>
-      <% end %>
-    </article>
-<% end %>
+    <% if @a6.present? %>
+        <article class="normal__home a6">
+          <h2>
+            <%= link_to @a6.titulo, @a6 %>
+          </h2>
+          <% if @a6.image.present? %>
+            <div style="width:300px; height:auto" >
+              <%= link_to image_tag(@a6.image, style:'width:100%'), @a6 %>
+            </div>
+          <% end %>
+        </article>
+    <% end %>
 
-<% if @a8.present? %>
-    <article class="normal__home a8">
-      <h2>
-        <%= link_to @a8.titulo, @a8 %>
-      </h2>
-      <% if @a8.image.present? %>
-        <div style="width:300px; height:auto" >
-          <%= link_to image_tag(@a8.image, style:'width:100%'), @a8 %>
-        </div>
-      <% end %>
-    </article>
-<% end %>
+    <% if @a7.present? %>
+        <article class="normal__home a7">
+          <h2>
+            <%= link_to @a7.titulo, @a7 %>
+          </h2>
+          <% if @a7.image.present? %>
+            <div style="width:300px; height:auto" >
+              <%= link_to image_tag(@a7.image, style:'width:100%'), @a7 %>
+            </div>
+          <% end %>
+        </article>
+    <% end %>
 
-<% if @a9.present? %>
-    <article class="normal__home a9">
-      <h2>
-        <%= link_to @a9.titulo, @a9 %>
-      </h2>
-      <% if @a9.image.present? %>
-        <div style="width:300px; height:auto" >
-          <%= link_to image_tag(@a9.image, style:'width:100%'), @a9 %>
-        </div>
-      <% end %>
-    </article>
-<% end %>
+    <% if @a8.present? %>
+        <article class="normal__home a8">
+          <h2>
+            <%= link_to @a8.titulo, @a8 %>
+          </h2>
+          <% if @a8.image.present? %>
+            <div style="width:300px; height:auto" >
+              <%= link_to image_tag(@a8.image, style:'width:100%'), @a8 %>
+            </div>
+          <% end %>
+        </article>
+    <% end %>
 
-<% if @a10.present? %>
-    <article class="normal__home a10">
-      <h2>
-        <%= link_to @a10.titulo, @a10 %>
-      </h2>
-      <% if @a10.image.present? %>
-        <div style="width:300px; height:auto" >
-          <%= link_to image_tag(@a10.image, style:'width:100%'), @a10 %>
-        </div>
-      <% end %>
-    </article>
-<% end %>
+    <% if @a9.present? %>
+        <article class="normal__home a9">
+          <h2>
+            <%= link_to @a9.titulo, @a9 %>
+          </h2>
+          <% if @a9.image.present? %>
+            <div style="width:300px; height:auto" >
+              <%= link_to image_tag(@a9.image, style:'width:100%'), @a9 %>
+            </div>
+          <% end %>
+        </article>
+    <% end %>
 
-<% if @a11.present? %>
-    <article class="normal__home a11">
-      <h2>
-        <%= link_to @a11.titulo, @a11 %>
-      </h2>
-      <% if @a11.image.present? %>
-        <div style="width:300px; height:auto" >
-          <%= link_to image_tag(@a11.image, style:'width:100%'), @a11 %>
-        </div>
-      <% end %>
-    </article>
-<% end %>
+    <% if @a10.present? %>
+        <article class="normal__home a10">
+          <h2>
+            <%= link_to @a10.titulo, @a10 %>
+          </h2>
+          <% if @a10.image.present? %>
+            <div style="width:300px; height:auto" >
+              <%= link_to image_tag(@a10.image, style:'width:100%'), @a10 %>
+            </div>
+          <% end %>
+        </article>
+    <% end %>
 
-<% if @a12.present? %>
-    <article class="normal__home a12">
-      <h2>
-        <%= link_to @a12.titulo, @a12 %>
-      </h2>
-      <% if @a12.image.present? %>
-        <div style="width:300px; height:auto" >
-          <%= link_to image_tag(@a12.image, style:'width:100%'), @a12 %>
-        </div>
-      <% end %>
-    </article>
-<% end %>
+    <% if @a11.present? %>
+        <article class="normal__home a11">
+          <h2>
+            <%= link_to @a11.titulo, @a11 %>
+          </h2>
+          <% if @a11.image.present? %>
+            <div style="width:300px; height:auto" >
+              <%= link_to image_tag(@a11.image, style:'width:100%'), @a11 %>
+            </div>
+          <% end %>
+        </article>
+    <% end %>
+
+    <% if @a12.present? %>
+        <article class="normal__home a12">
+          <h2>
+            <%= link_to @a12.titulo, @a12 %>
+          </h2>
+          <% if @a12.image.present? %>
+            <div style="width:300px; height:auto" >
+              <%= link_to image_tag(@a12.image, style:'width:100%'), @a12 %>
+            </div>
+          <% end %>
+        </article>
+    <% end %>
+  </div>
