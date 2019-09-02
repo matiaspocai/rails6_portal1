@@ -1,18 +1,15 @@
 class ArticlesController < ApplicationController
   before_action :authenticate_user!, except: [:home, :show]
-  before_action :find_article, only: [:show, :edit, :update, :destroy]
+  before_action :is_admin, only: [:index, :edit]
+  before_action :find_article, only: [:new, :show, :edit, :update]
+
 
   def index
-    if signed_in?
-      user = current_user
-      @isAdmin = user.admin
       if @isAdmin
         @articles = Article.all.order(id: :desc)
       else
         redirect_to home_path
       end
-    end
-    
   end
 
   def home
@@ -35,15 +32,17 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1.json
   def show
-    @article = find_article
   end
 
   def new
-    @article = Article.new
   end
 
   def edit
-    @article = find_article
+    if @isAdmin
+      @article
+    else
+      redirect_to home_path
+    end
   end
 
   # POST /articles.json
@@ -62,7 +61,6 @@ class ArticlesController < ApplicationController
   end
 
   def update
-    @article = find_article
     respond_to do |format|
       if @article.update(article_params)
         format.html { redirect_to home_path }
@@ -85,11 +83,16 @@ class ArticlesController < ApplicationController
 
   private
     def find_article
-      Article.find(params[:id])
+      @article = Article.find(params[:id])
     end
 
     def article_params
       params.require(:article).permit(:volanta, :titulo, :bajada, :autor, :cuerpo, :ubicacion, :seccion, :publicado, :image, :imagedos, :area)
+    end
+
+    def is_admin
+      user = current_user
+      @isAdmin = user.admin
     end
 
 end
