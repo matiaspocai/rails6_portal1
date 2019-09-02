@@ -1,8 +1,7 @@
 class ArticlesController < ApplicationController
   before_action :authenticate_user!, except: [:home, :show]
-  before_action :is_admin, only: [:index, :edit]
-  before_action :find_article, only: [:new, :show, :edit, :update]
-
+  before_action :is_admin, except: [:home, :show, :new]
+  before_action :find_article, only: [:new, :show]
 
   def index
       if @isAdmin
@@ -32,6 +31,7 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1.json
   def show
+    is_admin
   end
 
   def new
@@ -39,7 +39,7 @@ class ArticlesController < ApplicationController
 
   def edit
     if @isAdmin
-      @article
+    @article = find_article
     else
       redirect_to home_path
     end
@@ -61,6 +61,7 @@ class ArticlesController < ApplicationController
   end
 
   def update
+    @article = find_article
     respond_to do |format|
       if @article.update(article_params)
         format.html { redirect_to home_path }
@@ -91,8 +92,10 @@ class ArticlesController < ApplicationController
     end
 
     def is_admin
-      user = current_user
-      @isAdmin = user.admin
+      if current_user
+        user = current_user
+        @isAdmin = user.admin
+      end
     end
 
 end
