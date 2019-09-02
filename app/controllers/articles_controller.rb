@@ -3,7 +3,16 @@ class ArticlesController < ApplicationController
   before_action :find_article, only: [:show, :edit, :update, :destroy]
 
   def index
-    @articles = Article.all.order(id: :desc)
+    if signed_in?
+      user = current_user
+      @isAdmin = user.admin
+      if @isAdmin
+        @articles = Article.all.order(id: :desc)
+      else
+        redirect_to home_path
+      end
+    end
+    
   end
 
   def home
@@ -82,4 +91,5 @@ class ArticlesController < ApplicationController
     def article_params
       params.require(:article).permit(:volanta, :titulo, :bajada, :autor, :cuerpo, :ubicacion, :seccion, :publicado, :image, :imagedos, :area)
     end
+
 end
