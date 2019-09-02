@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
   before_action :authenticate_user!, except: [:home, :show]
-  before_action :is_admin, except: [:home, :show, :new]
-  before_action :find_article, only: [:new, :show]
+  before_action :is_admin
+  before_action :find_article, only: [:show, :update, :destroy]
 
   def index
       if @isAdmin
@@ -61,7 +61,6 @@ class ArticlesController < ApplicationController
   end
 
   def update
-    @article = find_article
     respond_to do |format|
       if @article.update(article_params)
         format.html { redirect_to home_path }
@@ -74,7 +73,6 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
-    @article = find_article
     @article.destroy
     respond_to do |format|
       format.html { redirect_to articles_url, notice: 'Article was successfully destroyed.' }

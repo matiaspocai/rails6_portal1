@@ -21,9 +21,11 @@
           <%= link_to 'Portada', home_path %>
         </li>
             <% if signed_in? %>
-              <li>
-                <%= link_to 'Panel de Edición', articles_path %>
-              </li>
+              <% if @isAdmin %>
+                <li>
+                  <%= link_to 'Panel de Edición', articles_path %>
+                </li>
+              <% end %>
               <li>
                 <%= link_to "Salir", destroy_user_session_path, method: :delete %>
               </li>
