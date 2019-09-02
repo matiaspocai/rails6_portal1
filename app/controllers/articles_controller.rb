@@ -31,10 +31,14 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1.json
   def show
-    is_admin
   end
 
   def new
+    if @isAdmin
+      @article = Article.new
+    else
+      redirect_to home_path
+    end
   end
 
   def edit
