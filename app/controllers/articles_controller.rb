@@ -29,7 +29,6 @@ class ArticlesController < ApplicationController
     @a12 = articles[11]
   end
 
-  # GET /articles/1.json
   def show
   end
 
@@ -49,7 +48,6 @@ class ArticlesController < ApplicationController
     end
   end
 
-  # POST /articles.json
   def create
     @article = Article.new(article_params)
 

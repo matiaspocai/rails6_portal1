@@ -19,7 +19,7 @@
     <% @articles.each do |article| %>
       <tr>
         <td><%= article.volanta %></td>
-        <td><%= article.titulo %></td>
+        <td><%= link_to article.titulo, article %></td>
         <td><%= article.autor %></td>
         <td><%= article.area %></td>
         <td><%= article.ubicacion %></td>
