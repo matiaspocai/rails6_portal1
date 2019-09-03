@@ -2,8 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-
 .cuerpo{
     font-size: 1rem;
 }
@@ -23,80 +21,84 @@ a{
     padding-bottom: 1%;
 }
 
-.contenedor__home{
-    display: grid;
-    grid-template-areas: 
-    "he he he"
-    "ur ur ur"
-    "na na na"    
-    "a1 a2 a3"
-    "a4 a5 a6"
-    "a7 a8 a9"
-    "a10 a11 a12",
+@media only screen and (min-width: 911px){
+
+    .contenedor__home{
+        display: grid;
+        grid-template-areas: 
+        "he he he"
+        "ur ur ur"
+        "na na na"    
+        "a1 a2 a3"
+        "a4 a5 a6"
+        "a7 a8 a9"
+        "a10 a11 a12",
+    }
+    
+    header{
+        grid-area: he;
+    }
+    
+    nav{
+        grid-area: na;
+    }
+    
+    .urgente__home{
+        grid-area: ur;
+        background-color: red;
+        text-align: center;
+        padding: 1%;
+    }
+    
+    .a1{
+        grid-area: a1;
+    }
+    
+    .a2{
+        grid-area: a2;
+    }
+    
+    .a3{
+        grid-area: a3;
+    }
+    
+    .a4{
+        grid-area: a4;
+    }
+    
+    .a5{
+        grid-area: a5;
+    }
+    
+    .a6{
+        grid-area: a6;
+    }
+    
+    .a7{
+        grid-area: a7;
+    }
+    
+    .a8{
+        grid-area: a8;
+    }
+    
+    .a9{
+        grid-area: a9;
+    }
+    
+    .a10{
+        grid-area: a10;
+    }
+    
+    .a11{
+        grid-area: a11;
+    }
+    
+    .a12{
+        grid-area: a12;
+    }
 }
 
-header{
-    grid-area: he;
-}
-
-nav{
-    grid-area: na;
-}
-
-.urgente__home{
-    grid-area: ur;
-    background-color: red;
-    text-align: center;
-    padding: 1%;
-}
-
-.a1{
-    grid-area: a1;
-}
-
-.a2{
-    grid-area: a2;
-}
-
-.a3{
-    grid-area: a3;
-}
-
-.a4{
-    grid-area: a4;
-}
-
-.a5{
-    grid-area: a5;
-}
-
-.a6{
-    grid-area: a6;
-}
-
-.a7{
-    grid-area: a7;
-}
-
-.a8{
-    grid-area: a8;
-}
-
-.a9{
-    grid-area: a9;
-}
-
-.a10{
-    grid-area: a10;
-}
-
-.a11{
-    grid-area: a11;
-}
-
-.a12{
-    grid-area: a12;
-}
 
 @media only screen and (min-width: 671px) and (max-width: 910px){
     
