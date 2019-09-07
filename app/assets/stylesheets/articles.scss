@@ -90,7 +90,7 @@ a{
     .contenedor__home {
         display: grid;
 
-        @media (min-width: 800px)  {
+        @media (min-width: 990px)  {
             
             grid-template-areas: 
             "ur ur ur"
@@ -101,7 +101,7 @@ a{
             "a10 a11 a12";
         }
 
-        @media (max-width: 800px) {
+        @media (max-width: 990px) {
             grid-template-areas: 
             "ur ur"
             "na na"    
@@ -111,6 +111,24 @@ a{
             "a7 a8"
             "a9 a10"
             "a11 a12";
+        }
+
+        @media (max-width: 670px) {
+            grid-template-areas: 
+            "ur"
+            "na"    
+            "a1"
+            "a2"
+            "a3"
+            "a4"
+            "a5"
+            "a6"
+            "a7"
+            "a8"
+            "a9"
+            "a10"
+            "a11"
+            "a12";
         }
  
     }
