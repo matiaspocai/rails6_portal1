@@ -90,7 +90,7 @@ a{
     .contenedor__home {
         display: grid;
 
-        @media (min-width: 990px)  {
+        @media only screen and (min-width: 991px)  {
             
             grid-template-areas: 
             "ur ur ur"
@@ -101,7 +101,7 @@ a{
             "a10 a11 a12";
         }
 
-        @media (max-width: 990px) {
+        @media only screen and (min-width: 671px) and (max-width: 990px) {
             grid-template-areas: 
             "ur ur"
             "na na"    
@@ -113,7 +113,7 @@ a{
             "a11 a12";
         }
 
-        @media (max-width: 670px) {
+        @media only screen and (max-width: 670px) {
             grid-template-areas: 
             "ur"
             "na"    
