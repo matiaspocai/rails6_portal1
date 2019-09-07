@@ -6,6 +6,7 @@
     font-size: 1rem;
 }
 
+
 a{
     text-decoration: none;
 }
@@ -21,18 +22,6 @@ a{
     padding-bottom: 1%;
 }
 
-
-    .contenedor__home{
-        display: grid;
-        grid-template-areas: 
-        "he he he"
-        "ur ur ur"
-        "na na na"    
-        "a1 a2 a3"
-        "a4 a5 a6"
-        "a7 a8 a9"
-        "a10 a11 a12",
-    }
     
     header{
         grid-area: he;
@@ -96,3 +85,35 @@ a{
     .a12{
         grid-area: a12;
     }
+
+
+    .contenedor__home {
+        display: grid;
+
+        @media (min-width: 800px)  {
+            
+            grid-template-areas: 
+            "ur ur ur"
+            "na na na"    
+            "a1 a2 a3"
+            "a4 a5 a6"
+            "a7 a8 a9"
+            "a10 a11 a12";
+        }
+
+        @media (max-width: 800px) {
+            grid-template-areas: 
+            "ur ur"
+            "na na"    
+            "a1 a2"
+            "a3 a4"
+            "a5 a6"
+            "a7 a8"
+            "a9 a10"
+            "a11 a12";
+        }
+ 
+    }
+
+
+

@@ -10,36 +10,36 @@
   </head>
 
   <body>
-    <header>
-      <h1>
-        P1: Modelo Portal con Rails
-      </h1>
-    </header>
-    <nav>
-      <ul>
-        <li>
-          <%= link_to 'Portada', home_path %>
-        </li>
-            <% if signed_in? %>
-              <% if @isAdmin %>
-                <li>
-                  <%= link_to 'Panel de Edición', articles_path %>
-                </li>
-              <% end %>
-              <li>
-                <%= link_to "Salir", destroy_user_session_path, method: :delete %>
-              </li>
-            <% else %>
-              <li>
-                <%= link_to "Registrarse", new_user_registration_path %>
-              </li>
-              <li>
-                <%= link_to "Ingresar", new_user_session_path %>
-              </li>
-            <% end %>    
-        </ul>
-      </nav>
 
-    <%= yield %>
+      <header>
+        <h1>
+          P1: Modelo Portal con Rails
+        </h1>
+      </header>
+      <nav>
+        <ul>
+          <li>
+            <%= link_to 'Portada', home_path %>
+          </li>
+              <% if signed_in? %>
+                <% if @isAdmin %>
+                  <li>
+                    <%= link_to 'Panel de Edición', articles_path %>
+                  </li>
+                <% end %>
+                <li>
+                  <%= link_to "Salir", destroy_user_session_path, method: :delete %>
+                </li>
+              <% else %>
+                <li>
+                  <%= link_to "Registrarse", new_user_registration_path %>
+                </li>
+                <li>
+                  <%= link_to "Ingresar", new_user_session_path %>
+                </li>
+              <% end %>    
+          </ul>
+        </nav>
+      <%= yield %>
   </body>
 </html>
