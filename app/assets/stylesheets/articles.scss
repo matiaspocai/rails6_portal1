@@ -1,16 +1,14 @@
 
-
 .cuerpo{
     font-size: 1rem;
 }
 
+.normal__home{
+    padding: 1%;
+}
 
 a{
     text-decoration: none;
-}
-
-.normal__home{
-    padding: 1%;
 }
 
 .urgente{
@@ -20,7 +18,6 @@ a{
     padding-bottom: 1%;
 }
 
-    
 header{
     grid-area: he;
 }
@@ -34,6 +31,17 @@ nav{
     background-color: red;
     text-align: center;
     padding: 1%;
+}
+
+.titulo__normal__home{
+    padding-top: 5%;
+    padding-bottom: 2%;
+}
+
+.titulo__normal__home a{
+    font-size: 1.5rem;
+    padding-bottom: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
     
 .a1{
@@ -108,10 +116,11 @@ nav{
             "a7 a8"
             "a9 a10"
             "a11 a12";
+
     }
 
-        @media only screen and (max-width: 690px) {
-            grid-template-areas: 
+    @media only screen and (max-width: 690px) {
+        grid-template-areas: 
             "ur"
             "na"    
             "a1"
@@ -126,7 +135,8 @@ nav{
             "a10"
             "a11"
             "a12";
-        }
+
+    }
  
 }
 
