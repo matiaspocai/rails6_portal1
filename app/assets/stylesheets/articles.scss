@@ -1,6 +1,4 @@
-// Place all the styles related to the articles controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
 
 .cuerpo{
     font-size: 1rem;
@@ -23,86 +21,85 @@ a{
 }
 
     
-    header{
-        grid-area: he;
-    }
+header{
+    grid-area: he;
+}
     
-    nav{
-        grid-area: na;
-    }
+nav{
+    grid-area: na;
+}
     
-    .urgente__home{
-        grid-area: ur;
-        background-color: red;
-        text-align: center;
-        padding: 1%;
-    }
+.urgente__home{
+    grid-area: ur;
+    background-color: red;
+    text-align: center;
+    padding: 1%;
+}
     
-    .a1{
-        grid-area: a1;
-    }
+.a1{
+    grid-area: a1;
+}
     
-    .a2{
-        grid-area: a2;
-    }
+.a2{
+    grid-area: a2;
+}
     
-    .a3{
-        grid-area: a3;
-    }
+.a3{
+    grid-area: a3;
+}
     
-    .a4{
-        grid-area: a4;
-    }
+.a4{
+    grid-area: a4;
+}
     
-    .a5{
-        grid-area: a5;
-    }
+.a5{
+    grid-area: a5;
+}
     
-    .a6{
-        grid-area: a6;
-    }
+.a6{
+    grid-area: a6;
+}
     
-    .a7{
-        grid-area: a7;
-    }
+.a7{
+    grid-area: a7;
+}
     
-    .a8{
-        grid-area: a8;
-    }
+.a8{
+    grid-area: a8;
+}
     
-    .a9{
-        grid-area: a9;
-    }
+.a9{
+    grid-area: a9;
+}
     
-    .a10{
-        grid-area: a10;
-    }
+.a10{
+    grid-area: a10;
+}
     
-    .a11{
-        grid-area: a11;
-    }
+.a11{
+    grid-area: a11;
+}
     
-    .a12{
-        grid-area: a12;
-    }
+.a12{
+    grid-area: a12;
+}
 
+.contenedor__home {
+    display: grid;
 
-    .contenedor__home {
-        display: grid;
-
-        @media only screen and (min-width: 991px)  {
+    @media only screen and (min-width: 1001px)  {
             
-            grid-template-areas: 
+        grid-template-areas: 
             "ur ur ur"
             "na na na"    
             "a1 a2 a3"
             "a4 a5 a6"
             "a7 a8 a9"
             "a10 a11 a12";
-        }
+    }
 
-        @media only screen and (min-width: 671px) and (max-width: 990px) {
-            grid-template-areas: 
+    @media only screen and (min-width: 691px) and (max-width: 1000px) {
+        grid-template-areas: 
             "ur ur"
             "na na"    
             "a1 a2"
@@ -111,9 +108,9 @@ a{
             "a7 a8"
             "a9 a10"
             "a11 a12";
-        }
+    }
 
-        @media only screen and (max-width: 670px) {
+        @media only screen and (max-width: 690px) {
             grid-template-areas: 
             "ur"
             "na"    
@@ -131,7 +128,7 @@ a{
             "a12";
         }
  
-    }
+}
 
 
 
