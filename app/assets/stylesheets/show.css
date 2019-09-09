@@ -1,0 +1,32 @@
+.contenedor__article{
+  margin: 0 auto;
+  width: 85%;
+}
+
+.volanta__article{
+  padding-bottom: 0.5rem;
+}
+
+.titulo__article{
+  font-size: 2rem;
+  line-height: 2.2rem;
+  padding-bottom: 1rem;
+}
+
+.imagen__article{
+  width: 30rem;
+  padding-bottom: 0.7rem;
+}
+
+.bajada__article{
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.2rem;
+  font-style: italic;
+  padding-bottom: 1rem;
+}
+
+
+.cuerpo__article{
+  font-size: 1rem;
+}

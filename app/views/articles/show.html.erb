@@ -1,63 +1,34 @@
-<p>
-  <strong>Seccion:</strong>
-  <%= @article.seccion %>
-</p>
-<p>
-  <strong>Volanta:</strong>
-  <%= @article.volanta %>
-</p>
+<div class="contenedor__article">
 
-<p>
-  <strong>Titulo:</strong>
-  <%= @article.titulo %>
-</p>
-
-<% if @article.image.present? %>
-  <div style="width:300px; height:auto" >
-    <%= image_tag(@article.image, style:'width:100%') %>
+  <div class="volanta__article">
+    <%= @article.volanta %>
   </div>
-<% end %>
-
-<p>
-  <strong>Bajada:</strong>
-  <%= @article.bajada %>
-</p>
-
-<p>
-  <strong>Autor:</strong>
-  <%= @article.autor %>
-</p>
-
-<p>
-  <strong>Cuerpo:</strong>
-  <div class="cuerpo">
-    <%= @article.cuerpo %>
+  <div class="titulo__article">
+    <%= @article.titulo %>
   </div>
-</p>
-
-<p>
-  <strong>Publicado:</strong>
-  <%= @article.publicado %>
-</p>
-
-<p>
-  <strong>Area:</strong>
-  <%= @article.area %>
-</p>
-
-<p>
-  <strong>Ubicacion:</strong>
-  <%= @article.ubicacion %>
-</p>
-
-<% if @article.imagedos.present? %>
-  <div style="width:300px; height:auto" >
-    <%= image_tag(@article.imagedos, style:'width:100%') %>
+  <% if @article.image.present? %>
+      <%= image_tag(@article.image, class:'imagen__article') %>
+  <% end %>
+  <div class="bajada__article">
+    <%= @article.bajada %>
   </div>
-<% end %>
+  <div class="autor_article">
+    <%= @article.autor %>
+  </div>
+  <div>
+    <div class="cuerpo__article">
+      <%= @article.cuerpo %>
+    </div>
+  </div>
 
+  <% if @article.imagedos.present? %>
+    <div style="width:300px; height:auto" >
+      <%= image_tag(@article.imagedos, class:'imagen__article') %>
+    </div>
+  <% end %>
 
-<% if @isAdmin %>
-  <%= link_to 'Editar', edit_article_path(@article) %> |
-  <%= link_to 'Panel', articles_path %>
-<% end %>
+  <% if @isAdmin %>
+    <%= link_to 'Editar', edit_article_path(@article) %> |
+    <%= link_to 'Panel', articles_path %>
+  <% end %>
+</div>

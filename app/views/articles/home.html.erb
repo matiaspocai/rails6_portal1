@@ -1,9 +1,9 @@
 
   <div class="contenedor__home">
-  
+
     <% if @urgente.present?%>
       <article class="urgente__home" >
-        <div class="urgente">
+        <div class="texto__urgente__home">
           Alerta: <%= @urgente.titulo %>
         </div>
       </article>
@@ -164,5 +164,5 @@
           <% end %>
         </article>
     <% end %>
-    
+
   </div>

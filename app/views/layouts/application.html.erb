@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>P1</title>
+    <title>Nombre del portal</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -12,9 +12,9 @@
   <body>
 
       <header>
-        <h1>
-          P1: Modelo Portal con Rails
-        </h1>
+        <div class="titulo__portal">
+          Artículos de actualidad
+        </div>
       </header>
       <nav>
         <ul>
@@ -37,7 +37,7 @@
                 <li>
                   <%= link_to "Ingresar", new_user_session_path %>
                 </li>
-              <% end %>    
+              <% end %>
           </ul>
         </nav>
       <%= yield %>
